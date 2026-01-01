@@ -1,10 +1,10 @@
-# LeetCode Solutions 🚀
+# LeetCode Solutions 
 
 This repository contains my solutions to LeetCode problems.
 I am solving problems daily to strengthen my understanding of
 Data Structures, Algorithms, and problem-solving skills.
 
-## 🧠 Topics Covered (DSA Roadmap)
+##  Topics Covered (DSA Roadmap)
 - Arrays
 - Strings
 - Math
@@ -25,13 +25,13 @@ Data Structures, Algorithms, and problem-solving skills.
 - Basic Graphs
 - Dynamic Programming (Basic)
 
-> ⚠️ **Note:** Extremely advanced or hard-level topics will be added later
+> **Note:** Extremely advanced or hard-level topics will be added later
 > after building strong fundamentals.
 
-## 💻 Language Used
+## Language Used
 - Java
 
-## 📂 Folder Structure
+## Folder Structure
 leetcode-solutions/
 │
 ├── Arrays/
@@ -45,13 +45,13 @@ leetcode-solutions/
 ├── DP/
 └── README.md
 
-## 🎯 Goals
+##  Goals
 - Solve problems **daily**
 - Build strong DSA fundamentals
 - Improve logical thinking
 - Prepare for coding interviews
 - Write clean and optimized code
 
-## 📌 Note
+##  Note
 Problem statements are not copied due to LeetCode copyright.
 Only original solutions and explanations are provided.
