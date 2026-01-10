@@ -1,0 +1,23 @@
+class Solution {
+    public int findKthPositive(int[] arr, int k) {
+        int missing = 0;
+        int prev = 0;
+
+        for (int num : arr) {
+            // how many numbers are missing between prev and num
+            int gap = num - prev - 1;
+
+            // if kth missing lies in this gap
+            if (missing + gap >= k) {
+                return prev + (k - missing);
+            }
+
+            // otherwise, skip this gap
+            missing += gap;
+            prev = num;
+        }
+
+        // if kth missing is after the last element
+        return prev + (k - missing);
+    }
+}
