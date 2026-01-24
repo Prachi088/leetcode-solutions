@@ -1,0 +1,23 @@
+class Solution {
+    public List<String> letterCombinations(String digits) {
+         if (digits.isEmpty()) return new ArrayList<>();
+         return check("", digits);
+    }
+     private List<String> check(String p,String digits){
+         List<String> outer=new ArrayList<>();
+         if(digits.isEmpty()){
+            outer.add(p);
+            return outer;
+        }
+         int n = digits.charAt(0) - '0';
+        int start=(n-2)*3;
+        int end=3;
+            if(n>7) start+=1;
+            if(n==7 || n==9) end=4;
+         for(int i=start;i<end+start;i++){
+            char ch=(char)('a'+i);
+            outer.addAll(check(p+ch,digits.substring(1)));
+         }
+         return outer;
+           }
+}
