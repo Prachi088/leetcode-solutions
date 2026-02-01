@@ -1,0 +1,11 @@
+class Solution {
+    public int minimumCost(int[] nums) {
+            int sum=Integer.MAX_VALUE;
+            int firstvalue=nums[1];
+             for(int j=2;j<nums.length;j++){
+             sum= Math.min(sum,nums[0]+firstvalue+nums[j]);
+             firstvalue= Math.min(firstvalue,nums[j]);
+             }
+        return sum;
+    }
+}
