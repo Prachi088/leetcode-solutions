@@ -1,34 +1,21 @@
 class Solution {
     public boolean isTrionic(int[] nums) {
         int n = nums.length;
-        if (n < 4) return false;
-
         int i = 0;
 
-        //  strictly increasing: nums[0...p]
-        while (i + 1 < n && nums[i] < nums[i + 1]) {
-            i++;
-        }
+        // Increasing
+        while (i + 1 < n && nums[i] < nums[i + 1]) i++;
         int p = i;
-
-        // p must be > 0
         if (p == 0) return false;
 
-        //   strictly decreasing: nums[p...q]
-        while (i + 1 < n && nums[i] > nums[i + 1]) {
-            i++;
-        }
+        // Decreasing
+        while (i + 1 < n && nums[i] > nums[i + 1]) i++;
         int q = i;
-
-        // q must be > p and < n-1
         if (q == p || q == n - 1) return false;
 
-        //  strictly increasing: nums[q...n-1]
-        while (i + 1 < n && nums[i] < nums[i + 1]) {
-            i++;
-        }
+        // Increasing again
+        while (i + 1 < n && nums[i] < nums[i + 1]) i++;
 
-        // must reach end
         return i == n - 1;
     }
 }
