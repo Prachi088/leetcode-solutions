@@ -21,7 +21,6 @@ class Solution {
                         }
                     }
                 }
-
                 if (balanced)
                     ans = Math.max(ans, j - i + 1);
             }
